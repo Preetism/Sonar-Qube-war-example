@@ -16,7 +16,7 @@ pipeline{
         post {
                 success {
                     script {
-                        def server = Artifactory.newServer(url: 'http://13.207.51.143:8081/artifactory/', credentialsId: 'jfrog')
+                        def server = Artifactory.newServer(url: 'http://http://3.110.208.138:8081/artifactory/', credentialsId: 'jfrog')
                         def rtMaven = Artifactory.newMavenBuild()
                         //rtMaven.deployer server: server, releaseRepo: 'libs-release/', snapshotRepo: 'libs-snapshot/'
                         rtMaven.deployer server: server, releaseRepo: 'sagar/', snapshotRepo: 'sagar/'
